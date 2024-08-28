@@ -1,0 +1,1 @@
+https://dataweave.mulesoft.com/learn/playground?projectMethod=GHRepo&repo=tlgfedericotomasi%2Fdataweave-playgrounds&path=wmsMappingSample
