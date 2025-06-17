@@ -1,0 +1,29 @@
+{
+  "inputPayload": {
+    "transactionId": "transactionId",
+    "requestPayload": "requestPayload",
+    "requestUserProperties": "requestUserProperties",
+    "errorMessage": "errorMessage",
+    "warningMessage": "warningMessage",
+    "eventClass": "eventClass",
+    "eventType": "eventType",
+    "queueName": "queueName",
+    "lastModifiedDate": "lastModifiedDate",
+    "toBeReprocessed": false,
+    "numberOfRetries": "numberOfRetries",
+    "successfulActions": [],
+    "failedActions": [],
+    "notExecutedActions": [],
+    "orderNumber": "orderNumber",
+    "shipmentOrderNumber": "shipmentOrderNumber",
+    "omsShipmentNumber": "omsShipmentNumber",
+    "shipmentHeld": true,
+    "eventTimestamp": "eventTimestamp"
+  },
+  "inputAttributes": {
+    "queryParams": {
+      "orderNumber": "orderNumber",
+      "shipmentHeld": false
+    }
+  }
+}
