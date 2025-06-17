@@ -16,15 +16,16 @@ fun safeBoolean(b, fallback) =
   else
     "null"), $(fallback))"
 
-fun safeArray(arr, fallback) =
-  "COALESCE(" ++ (
-    if (arr != null and !isEmpty(arr))
-        "ARRAY[" ++ (((arr filter (i) -> i != null) map (i) -> "'$(i)'") joinBy ",") as String ++ "]"
-    else if (arr != null)
-        "ARRAY[]"
+fun safeArray(arr, fallback) = do {
+  var arrItems = if (arr != null and !isEmpty(arr)) (((arr filter (i) -> i != null) map (i) -> "'$(i)'") joinBy ",") as String else ''
+  ---
+  "COALESCE($(
+    if (arr == null)
+        'null'
     else
-        "null"
-    ) ++ ", $(fallback))"
+        'ARRAY[$(arrItems)]'
+    ), $(fallback))"
+}
 
 fun safeTimestamp(ts, fallback) =
   "COALESCE($(if ((ts default "") == "")
